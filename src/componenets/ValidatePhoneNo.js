@@ -37,10 +37,10 @@ function ValidatePhoneNo() {
       <h1 className="title header">Phone Validator.</h1>
       <p className="para_text">
         {" "}
-        "Free Phone Validator: Ultimate Tool for Accurate
-        Numbers. Boost Your Success Today!"
+        "Free Phone Validator: Ultimate Tool for Accurate Numbers. Boost Your
+        Success Today!"
       </p>
-    <p className="para_text2 ">TRUSTED BY THE BEST SEO MARKETERS!</p>
+      <p className="para_text2 ">TRUSTED BY THE BEST SEO MARKETERS!</p>
       <div className="input_submit_btn_div">
         <input
           className="input_class"
@@ -48,24 +48,20 @@ function ValidatePhoneNo() {
           placeholder="Eg...+12065550100"
           value={number}
           onChange={event => setNumber(event.target.value)}
-        />{" "}
+        />
         <br />
         <button className="Validate_btn header2" onClick={handleValidate}>
           Validate Number
         </button>
       </div>
       {data && (
-        <div className="result_div header2">
-          <h4>Format International: {data.format_international}</h4>
-          <h4>Is Valid: {data.is_valid}</h4>
-          {/* <h4>Is Formatted Properly: {data.is_formatted_properly}</h4> */}
+        <div className="result_div header3">
+          <p>Format International: {data.format_international}</p>
+          <p>Is Valid: {data.is_valid}</p>
           {data.timezones && <h4>Timezones: {data.timezones.join(", ")}</h4>}
-          <h4>Country: {data.country}</h4>
-          {/* <h4>Location: {data.location}</h4> */}
-          <h4>Format National: {data.format_national}</h4>
-          {/* <h4>Format International: {data.format_international}</h4> */}
-          {/* <h4>Format E164: {data.format_e164}</h4> */}
-          <h4>Country Code: {data.country_code}</h4>
+          <p>Country: {data.country}</p>
+          <p>Format National: {data.format_national}</p>
+          <p>Country Code: {data.country_code}</p>
         </div>
       )}
     </div>
