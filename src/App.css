@@ -22,28 +22,27 @@ body {
   color: whitesmoke;
   max-width: 100%; 
   margin: 0 auto;
-  margin-bottom: 4rem;
   text-align: center;
 }
 
-.para_text2 {
+.para_text2{
   font-size: 0.8rem;
   line-height: 30px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  max-width: 50rem; 
+  max-width: 30rem; 
   margin: 0 auto;
   margin-bottom: 2rem;
   color: #888;
   letter-spacing: 0.4rem;
 }
 
-.para_text {
+.para_text{
   font-size: 1.2rem;
   line-height: 30px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  max-width: 50rem; 
+  max-width: 40rem; 
   margin: 0 auto;
   margin-bottom: 2rem;
   color: #888;
@@ -92,6 +91,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
 .Validate_btn:hover {
@@ -99,14 +99,17 @@ body {
 }
 
 .result_div{
-    margin: 0 auto;
-    width: 50vw;
-    max-width: 50rem; 
-    padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 2rem;
+  margin: 0 auto;
+  width: 50vw;
+  max-width: 50rem;
+  padding: 2rem;
+  background: #000000f3;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+  margin-bottom: 2rem;
+  color: #888;
+  border: 4px solid green!important;
   }
   
 

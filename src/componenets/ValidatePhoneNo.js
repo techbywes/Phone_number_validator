@@ -55,7 +55,7 @@ function ValidatePhoneNo() {
         </button>
       </div>
       {data && (
-        <div className="result_div">
+        <div className="result_div header2">
           <h4>Format International: {data.format_international}</h4>
           <h4>Is Valid: {data.is_valid}</h4>
           {/* <h4>Is Formatted Properly: {data.is_formatted_properly}</h4> */}
