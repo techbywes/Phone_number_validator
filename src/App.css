@@ -47,17 +47,16 @@ body {
   color: #888;
 }
 
+
 .input_class {
-  height: 40px;
-  width: 19rem;
-  background-color: #0C0C0C;
-  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  width: 19rem!important;
+  margin: 0 auto;
   box-shadow: none;
-  padding-left: 30px;
   font-size: 16px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   outline: none;
-  border: 0.1px solid rgb(198, 195, 195);
   border-radius: 4px;
 }
 

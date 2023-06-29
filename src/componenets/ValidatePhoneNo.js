@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 function ValidatePhoneNo() {
   const [number, setNumber] = useState("");
@@ -7,10 +9,8 @@ function ValidatePhoneNo() {
 
   const validateNumber = async () => {
     try {
-      const apiKey = "Zraj/MIeUXiv0teG+pWCgA==vX0cqtoPIASbm9cg";
-      const url = `https://api.api-ninjas.com/v1/validatephone?number=${encodeURIComponent(
-        number
-      )}`;
+      const apiKey = "Zraj/MIeUXiv0teG+pWCgA==vX0cqtoPIASbm9cg"; 
+      const url = `https://api.api-ninjas.com/v1/validatephone?number=${encodeURIComponent(number)}`;
       const headers = {
         "X-Api-Key": apiKey,
         "Content-Type": "application/json",
@@ -25,10 +25,10 @@ function ValidatePhoneNo() {
 
   const handleValidate = () => {
     validateNumber();
-    // setNumber("");
   };
 
   useEffect(() => {
+    // Remove the initial validation call if not required
     validateNumber();
   }, []);
 
@@ -36,19 +36,18 @@ function ValidatePhoneNo() {
     <div className="general_container">
       <h1 className="title header">Phone Validator.</h1>
       <p className="para_text">
-        {" "}
-        "Free Phone Validator: Ultimate Tool for Accurate Numbers. Boost Your
-        Success Today!"
+        "Free Phone Validator: Ultimate Tool for Accurate Numbers. Boost Your Success Today!"
       </p>
-      <p className="para_text2 ">TRUSTED BY THE BEST SEO MARKETERS!</p>
+      <p className="para_text2">TRUSTED BY THE BEST SEO MARKETERS!</p>
       <div className="input_submit_btn_div">
-        <input
+        <label >
+          <PhoneInput
           className="input_class"
-          type="text"
-          placeholder="Eg...+12065550100"
-          value={number}
-          onChange={event => setNumber(event.target.value)}
-        />
+            country={'us'}
+            value={number}
+            onChange={setNumber}
+          />
+        </label>
         <br />
         <button className="Validate_btn header2" onClick={handleValidate}>
           Validate Number
