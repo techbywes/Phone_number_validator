@@ -37,7 +37,7 @@ function ValidatePhoneNo() {
     <div className="general_container">
       <h1 className="title header">Phone Number Validator.</h1>
       <p className="para_text">
-        "Free Phone Validator: Ultimate Tool for Accurate Numbers."
+        "Free Phone Validator: Ultimate Tool for Accurate Numbers".
       </p>
       <p className="para_text2">TRUSTED BY THE BEST SEO MARKETERS!</p>
       <div className="input_submit_btn_div">
