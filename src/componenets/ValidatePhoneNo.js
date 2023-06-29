@@ -6,9 +6,11 @@ import "react-phone-input-2/lib/style.css";
 function ValidatePhoneNo() {
   const [number, setNumber] = useState("");
   const [data, setData] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const validateNumber = async () => {
     try {
+      setIsLoading(true);
       const apiKey = "Zraj/MIeUXiv0teG+pWCgA==vX0cqtoPIASbm9cg"; 
       const url = `https://api.api-ninjas.com/v1/validatephone?number=${encodeURIComponent(number)}`;
       const headers = {
@@ -20,17 +22,14 @@ function ValidatePhoneNo() {
       console.log(response.data);
     } catch (error) {
       console.error("Error:", error);
+    }finally {
+      setIsLoading(false); 
     }
   };
 
   const handleValidate = () => {
     validateNumber();
   };
-
-  useEffect(() => {
-    // Remove the initial validation call if not required
-    validateNumber();
-  }, []);
 
   return (
     <div className="general_container">
@@ -53,15 +52,21 @@ function ValidatePhoneNo() {
           Validate Number
         </button>
       </div>
-      {data && (
-        <div className="result_div header3">
-          <p>Format International: {data.format_international}</p>
-          <p>Is Valid: {data.is_valid}</p>
-          {data.timezones && <h4>Timezones: {data.timezones.join(", ")}</h4>}
-          <p>Country: {data.country}</p>
-          <p>Format National: {data.format_national}</p>
-          <p>Country Code: {data.country_code}</p>
-        </div>
+      {isLoading ? (
+        <p className="loading_message">Loading...</p> // Display a loading message or spinner while loading
+      ) : (
+        data && (
+          <div className="result_div header3">
+            <p>Format International: {data.format_international}</p>
+            <p>Is Valid: {data.is_valid}</p>
+            {data.timezones && (
+              <h4>Timezones: {data.timezones.join(", ")}</h4>
+            )}
+            <p>Country: {data.country}</p>
+            <p>Format National: {data.format_national}</p>
+            <p>Country Code: {data.country_code}</p>
+          </div>
+        )
       )}
     </div>
   );

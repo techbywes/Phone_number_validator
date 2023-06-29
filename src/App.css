@@ -113,6 +113,13 @@ body {
   border: 1px solid green !important;
 }
 
+
+.loading_message{
+  letter-spacing: 0.5rem;
+  color: #888;
+  animation: hue 10s infinite linear;
+}
+
 /* TEXT ANIMATION STARTS HERE */
 .header {
   color: #f35626;
