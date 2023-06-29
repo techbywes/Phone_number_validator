@@ -49,19 +49,15 @@ body {
   color: #888;
 }
 
-.react-tel-input:focus {
-  font-size: 14px;
-  letter-spacing: .01rem;
-  border: 2px solid #ba0a0a!important;
-  border-radius: 5px;
-  line-height: 25px;
-  height: 50px;
-  outline: none;
-  z-index: 1;
+.selected-flag{
+  background-color: #181717 !important;
+  color: #6b6b6b;
 }
 
 .form-control{
   height: 40px!important;
+  background-color: #181717 !important;
+  color: whitesmoke;
 }
 
 .react-tel-input {
@@ -72,6 +68,17 @@ body {
   text-align: left; 
 }
 
+
+
+.country-list {
+  background-color: #181717 !important;
+  color: #6b6b6b;
+}
+
+
+.react-tel-input .country-list .country:hover {
+  background-color: #252525!important;
+}
 
 .input_class {
   display: flex;
@@ -173,6 +180,24 @@ body {
   animation: hue 12s infinite linear;
 }
 
+footer > span{
+  color: whitesmoke;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.7rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
+
+footer > a{
+  text-decoration: none;
+  color: whitesmoke;
+  animation: hue 12s infinite linear;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.7rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
+
 /* TEXT ANIMATION ENDS HERE */
 
 
@@ -196,10 +221,38 @@ body {
 }
 
 @media (max-width: 768px) and (min-width: 481px) {
+  .title {
+    font-size: 4rem;
+    white-space: pre-wrap;
+  }
+  .general_container {
+    text-align: center;
+    padding-top: 4rem;
+  }
+  .result_div {
+    width: 55vw;
+  }
+  .para_text2 {
+    font-size: 0.6rem;
+  }
   /* Styles for tablets */
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {
+  .title {
+    font-size: 4rem;
+    white-space: pre-wrap;
+  }
+  .general_container {
+    text-align: center;
+    padding-top: 4rem;
+  }
+  .result_div {
+    width: 55vw;
+  }
+  .para_text2 {
+    font-size: 0.6rem;
+  }
   /* Styles for laptops */
 }
 

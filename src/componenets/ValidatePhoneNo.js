@@ -11,8 +11,10 @@ function ValidatePhoneNo() {
   const validateNumber = async () => {
     try {
       setIsLoading(true);
-      const apiKey = "Zraj/MIeUXiv0teG+pWCgA==vX0cqtoPIASbm9cg"; 
-      const url = `https://api.api-ninjas.com/v1/validatephone?number=${encodeURIComponent(number)}`;
+      const apiKey = "Zraj/MIeUXiv0teG+pWCgA==vX0cqtoPIASbm9cg";
+      const url = `https://api.api-ninjas.com/v1/validatephone?number=${encodeURIComponent(
+        number
+      )}`;
       const headers = {
         "X-Api-Key": apiKey,
         "Content-Type": "application/json",
@@ -22,8 +24,8 @@ function ValidatePhoneNo() {
       console.log(response.data);
     } catch (error) {
       console.error("Error:", error);
-    }finally {
-      setIsLoading(false); 
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -39,10 +41,10 @@ function ValidatePhoneNo() {
       </p>
       <p className="para_text2">TRUSTED BY THE BEST SEO MARKETERS!</p>
       <div className="input_submit_btn_div">
-        <label >
+        <label>
           <PhoneInput
-          className="input_class form-control "
-            country={'us'}
+            className="input_class form-control "
+            country={"us"}
             value={number}
             onChange={setNumber}
           />
@@ -57,17 +59,20 @@ function ValidatePhoneNo() {
       ) : (
         data && (
           <div className="result_div header3">
-            <p>Format International: {data.format_international}</p>
             <p>Is Valid: {data.is_valid}</p>
-            {data.timezones && (
-              <h4>Timezones: {data.timezones.join(", ")}</h4>
-            )}
+            {data.timezones && <h4>Timezones: {data.timezones.join(", ")}</h4>}
             <p>Country: {data.country}</p>
             <p>Format National: {data.format_national}</p>
+            <p>Format International: {data.format_international}</p>
             <p>Country Code: {data.country_code}</p>
           </div>
         )
       )}
+
+      <footer>
+        <span> MADE BY</span>
+        <a className="header" href="https://techbywes.com/">  TECHBYWES</a>
+      </footer>
     </div>
   );
 }
