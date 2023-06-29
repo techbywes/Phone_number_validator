@@ -42,7 +42,7 @@ function ValidatePhoneNo() {
       <div className="input_submit_btn_div">
         <label >
           <PhoneInput
-          className="input_class"
+          className="input_class form-control "
             country={'us'}
             value={number}
             onChange={setNumber}
